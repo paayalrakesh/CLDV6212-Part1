@@ -1,0 +1,17 @@
+﻿@model ABC_Retailers.Models.User
+
+<h1>Create User</h1>
+
+<form asp-action="CreateUser" method="post">
+    <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" id="userName" name="userName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>

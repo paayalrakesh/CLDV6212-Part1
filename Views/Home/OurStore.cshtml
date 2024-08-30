@@ -1,0 +1,131 @@
+﻿﻿@{
+    ViewData["Title"] = "OurStore";
+}
+
+<!DOCTYPE html>
+<!--https://www.w3schools.com/html/default.asp-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun and Interactive Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e7e8d1;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted width of the images */
+            grid-gap: 20px;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+            .image:hover {
+                transform: scale(1.05);
+            }
+
+            .image img {
+                width: 100%; /* Set the image width to 100% of its container */
+                height: auto; /* Automatically adjust height to maintain aspect ratio */
+                max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+                max-height: 200px; /* Limit the maximum height of the image */
+                transition: transform 0.3s;
+            }
+
+            .image:hover img {
+                transform: scale(1.1);
+            }
+
+            .image .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #ffffff;
+                opacity: 0;
+                transition: opacity 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .image:hover .overlay {
+                opacity: 1;
+            }
+
+        .description {
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="~/../Images/CherryBombSet.jpg" alt="Cherry Bomb Set">
+            <div class="overlay">
+                <div class="description">
+                    Sold Out
+                </div>
+            </div>
+            <p class="prodDescription">
+                Cherry Bomb Dinner Set <br> R1500
+                <br> <span style="font-weight: 80; font-family: Verdana; font-size: 8pt"> Inspired by the creators love for Cherries, he served up a platter for us to enjoy them on</span>
+            </p>
+        </div>
+        <div class="image">
+            <img src="~/../Images/FairyGardenSet.jpg" alt="Fairy Garden Set">
+            <div class="overlay">
+                <div class="description">
+                    10 Left!<br> <a href="#" style="color: white">Add To Cart</a>
+                </div>
+            </div>
+            <p class="prodDescription">
+                Half A Tea Party <br> R1000
+                <br> <span style="font-weight: 80; font-family: Verdana; font-size: 8pt"> A tea set curated for tea lovers, but not so much biscuit lovers</span>
+            </p>
+        </div>
+        <div class="image">
+            <img src="~/../Images/SunsetFlowerSet.jpg" alt="Sunset Flower Set">
+            <div class="overlay">
+                <div class="description">
+                    In Stock <br> <a href="#" style="color: white">Add To Cart</a>
+                </div>
+            </div>
+            <p class="prodDescription">
+                Partner Mugs <br> R300
+                <br> <span style="font-weight: 80; font-family: Verdana; font-size: 8pt"> Inspired by the love of matching with your partner</span>
+            </p>
+        </div>
+        <div class="image">
+            <img src="~/../Images/TheKitchenSet.jpg" alt="The Kitchen Set">
+            <div class="overlay">
+                <div class="description">
+                    In Stock <br> <a href="#" style="color: white">Add To Cart</a>
+                </div>
+            </div>
+            <p class="prodDescription">
+                Utensil Vase <br> R800
+                <br> <span style="font-weight: 80; font-family: Verdana; font-size: 8pt"> For when your spoons are jealous of your flowers</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
